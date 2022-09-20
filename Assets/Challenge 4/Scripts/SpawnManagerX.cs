@@ -24,6 +24,9 @@ public class SpawnManagerX : MonoBehaviour
     {
         //gets reference to the Enemyx script of the enemy gameobject
         enemyScript = enemyPrefab.GetComponent<EnemyX>();
+        //making sure the speed returns to 100f at each start
+        enemyScript.speed = 100f;
+
     }
     // Update is called once per frame
     void Update()
@@ -34,7 +37,7 @@ public class SpawnManagerX : MonoBehaviour
         {
             SpawnEnemyWave(waveCount);
             //increases enemy speed on each wave
-            enemyScript.speed += 5;
+            enemyScript.speed += 10;
         }
     }
 
